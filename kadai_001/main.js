@@ -69,7 +69,8 @@ const keyPress = e => {
     typedfield.textContent = typed;
     untypedfield.textContent = untyped;
 
-
+    number.textContent = score;
+    number();
 
     // テキストがなくなったら新しいテキストを表示
     if(untyped === '') {
@@ -79,7 +80,6 @@ const keyPress = e => {
     };
 
 
-// タイピングスキルのランク付け
 const rankCheck = score => {
 
     // テキストを格納する変数を作る
@@ -145,9 +145,6 @@ start.addEventListener('click', () => {
 
     // キーボードのイベント処理
     document.addEventListener('keypress', keyPress);
-
-    number.textContent = score;
-    number();
 
 
 
